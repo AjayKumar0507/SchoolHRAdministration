@@ -7,6 +7,7 @@ namespace HRAdministration {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to School HR Administration System");
         }
     }
 
@@ -14,4 +15,20 @@ namespace HRAdministration {
     {
 
     }
+
+    public class HeadOfDepartment : EmployeeBase
+    {
+
+    }
+
+    public class DeputyHeadMaster: EmployeeBase
+    {
+
+    }
+
+    public class HeadMaster: EmployeeBase
+    {
+
+    }
+
 }

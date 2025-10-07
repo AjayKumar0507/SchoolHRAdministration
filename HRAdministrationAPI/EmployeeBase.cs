@@ -13,6 +13,5 @@ namespace HRAdministrationAPI
         public string LastName { get; set; }
         public virtual decimal Salary { get; set; }
     }
-    {
-    }
+
 }
