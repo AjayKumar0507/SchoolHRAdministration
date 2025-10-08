@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRAdministrationAPI
 {
-    interface IEmployee
+    public interface IEmployee
     {
         int Id {  get; set; }
 
