@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 
+
 namespace HRAdministration {     
 
     public enum EmployeeType
@@ -21,19 +22,27 @@ namespace HRAdministration {
             switch (employeeType)
             {
                 case EmployeeType.Teacher:
-                    employee = new Teacher {Id = id, FirstName = firstName, LastName = lastName, Salary = salary};
+                    employee = FactoryPatter<IEmployee, Teacher>.GetInstance();
                     break;
                 case EmployeeType.HeadOfDepartment:
-                    employee = new HeadOfDepartment {Id = id, FirstName = firstName, LastName = lastName, Salary = salary};
+                    employee = FactoryPatter<IEmployee, HeadOfDepartment>.GetInstance();
                     break;
                 case EmployeeType.DeputyHeadMaster:
-                    employee = new DeputyHeadMaster {Id = id, FirstName = firstName, LastName = lastName, Salary = salary};
+                    employee = FactoryPatter<IEmployee, DeputyHeadMaster>.GetInstance();
                     break;
                 case EmployeeType.HeadMaster:
-                    employee = new HeadMaster {Id = id, FirstName = firstName, LastName = lastName, Salary = salary};
+                    employee = FactoryPatter<IEmployee, HeadMaster>.GetInstance();
                     break;
                 default:
                     break;
+            }
+
+            if(employee != null)
+            {
+                employee.Id = id;
+                employee.FirstName = firstName;
+                employee.LastName = lastName;
+                employee.Salary = salary;
             }
 
             return employee;

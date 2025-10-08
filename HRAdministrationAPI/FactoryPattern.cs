@@ -1,3 +1,7 @@
+using System;
+using HRAdministrationAPI;
+using System.Linq;
+
 namespace HRAdministrationAPI
 {
     public static class FactoryPatter<K,T> where T:class, K, new()
